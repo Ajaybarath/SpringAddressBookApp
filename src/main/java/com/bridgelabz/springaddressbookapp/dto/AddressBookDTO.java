@@ -1,31 +1,15 @@
 package com.bridgelabz.springaddressbookapp.dto;
 
-public class AddressBookDTO {
+import lombok.Data;
+
+public @Data
+class AddressBookDTO {
 
     String name;
     String phone;
 
-    public AddressBookDTO() {
-    }
-
     public AddressBookDTO(String name, String phone) {
         this.name = name;
-        this.phone = phone;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
         this.phone = phone;
     }
 
