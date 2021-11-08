@@ -5,6 +5,9 @@ public class AddressBookDTO {
     String name;
     String phone;
 
+    public AddressBookDTO() {
+    }
+
     public AddressBookDTO(String name, String phone) {
         this.name = name;
         this.phone = phone;
@@ -24,5 +27,13 @@ public class AddressBookDTO {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    @Override
+    public String toString() {
+        return "AddressBookDTO{" +
+                "name='" + name + '\'' +
+                ", phone='" + phone + '\'' +
+                '}';
     }
 }
