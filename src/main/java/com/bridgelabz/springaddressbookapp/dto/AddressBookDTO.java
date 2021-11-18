@@ -13,9 +13,19 @@ class AddressBookDTO {
     @Pattern(regexp = "^([+]?([0-9]{2})?([6-9]{1}[0-9]{9}))$", message = "Phone number is Invalid")
     String phone;
 
-    public AddressBookDTO(String name, String phone) {
+    String address;
+    String city;
+    String zip;
+    String state;
+
+
+    public AddressBookDTO(String name, String phone, String address, String city, String zip, String state) {
         this.name = name;
         this.phone = phone;
+        this.address = address;
+        this.city = city;
+        this.zip = zip;
+        this.state = state;
     }
 
     @Override
@@ -23,6 +33,10 @@ class AddressBookDTO {
         return "AddressBookDTO{" +
                 "name='" + name + '\'' +
                 ", phone='" + phone + '\'' +
+                ", address='" + address + '\'' +
+                ", city='" + city + '\'' +
+                ", zip='" + zip + '\'' +
+                ", state='" + state + '\'' +
                 '}';
     }
 }
